@@ -2,10 +2,9 @@ import time
 import calendar
 import pandas as pd
 from binance.client import Client
+import numpy as np
 
-def profit_loss(market='BTC-USDT', start_date = '2020-01-01', end_date='2021-12-31', client=Client(), showlog=False):
-
-    import numpy as np
+def profit_loss(market: str, start_date: str, end_date: str, client: Client, showlog: bool=False):
 
     np.seterr(invalid='ignore')
 
